@@ -48,7 +48,14 @@ export const Steps =() => {
 
         setResult ((prev)=> (
             [...prev, 
-            {id:uuidv4(), date: form.dateForm , steps: form.stepsForm } ]));
+            {
+                id:uuidv4(),
+                date: form.dateForm ,
+                // steps: form.stepsForm 
+                steps: prev.date === form.dateForm ? prev.steps + form.stepsForm : 
+                    form.stepsForm                
+            } 
+        ]));
 
         setForm ({dateForm:'', stepsForm:''})
         // console.log('resulrs-', results)
