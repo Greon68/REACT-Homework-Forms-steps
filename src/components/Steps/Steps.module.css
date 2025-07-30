@@ -1,0 +1,43 @@
+.container,
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form {
+    display: flex;
+    gap: 30px;
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 0.5em;
+}
+
+.date,
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dateForm,
+.stepsForm {
+    padding: 5px;
+    /* border-radius: 0.2em; */
+
+}
+
+.title,
+.result {
+    display: flex;
+    justify-content: space-around;
+}
+
+.results {
+    background-color: beige;
+
+}
+
+.icone {
+    cursor: pointer;
+}
