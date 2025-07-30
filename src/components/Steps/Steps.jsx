@@ -66,9 +66,9 @@ export const Steps =() => {
             <form className={S.form} onSubmit={onFormSubmit}>  
 
                 <div className={S.date}>
-                    <label htmlFor="dateForm"> Дата( ДД.MM.ГГГГ )</label>
+                    <label htmlFor="dateForm"> Дата</label>
                     <input 
-                        type="text" 
+                        type="date" 
                         className={S.dateForm}
                         id='dateForm' 
                         name='dateForm' 
@@ -106,10 +106,10 @@ export const Steps =() => {
                     { results
                         .sort(function(a,b){  
                                 return new Date(b.date) - new Date(a.date);
-                        })  // НЕ РАБОТАЕТ !!!
+                        })  
                         .map ( (elem) =>
                             <li  key={elem.id} className = {S.result}>
-                                <span>{elem.date}</span>
+                                <span>{elem.date.split('-').reverse().join('.')}</span>
                                 <span> {elem.steps}</span>
                                 <span className={S.icone} onClick={()=>deleteResult(elem.id)}>
                                   {elem.date && <FaTimes/>}
@@ -124,3 +124,4 @@ export const Steps =() => {
     )
 }
 
+// let str2 = str.split('-').reverse().join('.')
