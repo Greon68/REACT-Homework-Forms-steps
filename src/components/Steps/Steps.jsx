@@ -52,10 +52,12 @@ export const Steps =() => {
                 id:uuidv4(),
                 date: form.dateForm ,
                 // steps: form.stepsForm 
-                steps: prev.date === form.dateForm ? prev.steps + form.stepsForm : 
+                steps: prev[0].date === form.dateForm ? prev[0].steps + form.stepsForm : 
                     form.stepsForm                
             } 
-        ]));
+        ]
+        
+        ));
 
         setForm ({dateForm:'', stepsForm:''})
         // console.log('resulrs-', results)
