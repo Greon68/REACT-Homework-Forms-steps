@@ -46,14 +46,13 @@ export const Steps =() => {
         // console.log ('Данные формы : ', dataForm);
         
 
-        setResult ((prev)=> (
+        setResult ((prev)=>  (
             [...prev, 
             {
                 id:uuidv4(),
                 date: form.dateForm ,
                 // steps: form.stepsForm 
-                steps: prev[0].date === form.dateForm ? prev[0].steps + form.stepsForm : 
-                    form.stepsForm                
+                steps: prev[0].date === form.dateForm ? +form.stepsForm + +prev[0].steps : form.stepsForm              
             } 
         ]
         
